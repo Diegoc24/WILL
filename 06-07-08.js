@@ -26,6 +26,10 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+
+      
+
+      this.amigos.push({nombre:  nombre, edad: edad});
       
     }
 
@@ -34,6 +38,8 @@ function crearClasePersona() {
       // No debe retornar nada.
 
       // Tu código aca:
+
+      this.hobbies.push(hobby);
 
     }
     getFriends() {
@@ -45,6 +51,14 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+      var arra = [];
+
+      for(var ami of this.amigos){
+
+       arra.push(ami["nombre"]);
+
+      }
+      return arra;
     }
 
     getHobbies() {
@@ -54,6 +68,14 @@ function crearClasePersona() {
 
       // Tu código aca:
 
+        var hobbi = [];
+
+        for(var ob of this.hobbies){
+
+          hobbi.push(ob);
+
+        }
+        return hobbi;
     }
 
     getPromedioEdad() {
@@ -72,8 +94,28 @@ function crearClasePersona() {
       // persona.getPromedioEdad() debería devolver 29 ya que (33 + 25) / 2 = 29
 
       // Tu código aca:
+      var edades = [];
+      var suma = 0;
+      for(var prom of this.amigos){
+
+        edades.push(prom["edad"]);
+
+      }
+
+      for(var i = 0;i < edades.length;i++){
+
+        suma += edades[i];
+
+      }
+
+      suma = suma / edades.length;
+
+      return suma;
 
     }
+
+    
+
   };
 
   return Persona;

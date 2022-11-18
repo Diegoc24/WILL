@@ -13,6 +13,21 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
+  var tot = [];
+  var stri = num.toString();
+  
+  for(i = 0;i <= stri.length;i++){
+
+    tot.unshift(stri[i]);
+
+  }
+
+var numal = tot.join("");
+if(numal == num){
+  return true;
+}else{
+  return false;
+}
 
 }
 

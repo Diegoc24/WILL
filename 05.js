@@ -15,6 +15,14 @@ function pluck(array, propiedad) {
 
   // Tu código acá:
 
+  var devo = [];
+
+  for( var prop of array){
+
+    devo.push(prop[propiedad]);
+
+  }
+return devo;
 }
 
 // No modifiques nada debajo de esta linea //
